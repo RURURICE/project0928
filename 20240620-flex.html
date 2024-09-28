@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ch7. Flex</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+    <style>
+        .box{
+            height: 120px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="display-5">1. flex-row (水平)</div>
+        <div class="row d-flex flex-row">
+            <div class="col-md-3">
+                <div class="box bg-primary">
+                    <div class="display-2">01</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box bg-primary">
+                    <div class="display-2">02</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box bg-primary">
+                    <div class="display-2">03</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="display-5">2. flex-row-reverse(水平反轉-可加上斷點)</div>
+        <div class="row d-flex flex-row flex-row-reverse">
+            <div class="col-md-3">
+                <div class="box bg-primary">
+                    <div class="display-2">01</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box bg-primary">
+                    <div class="display-2">02</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box bg-primary">
+                    <div class="display-2">03</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="display-5">3. flex-column(垂直-可加上斷點)</div>
+        <div class="row d-flex flex-column">
+            <div class="col-md-3">
+                <div class="box bg-primary">
+                    <div class="display-2">01</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box bg-success">
+                    <div class="display-2">02</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box bg-warning">
+                    <div class="display-2">03</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="display-5">4. flex-column(垂直反轉-可加上斷點)</div>
+        <div class="row d-flex flex-column-reverse">
+            <div class="col-md-3">
+                <div class="box bg-primary">
+                    <div class="display-2">01</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box bg-success">
+                    <div class="display-2">02</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box bg-warning">
+                    <div class="display-2">03</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="display-5">5. justify-content-start</div>
+        <div class="row justify-content-start">
+            <div class="col-md-2">
+                <div class="box bg-primary">
+                    <div class="display-2">01</div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="box bg-success">
+                    <div class="display-2">02</div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="box bg-warning">
+                    <div class="display-2">03</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="display-5">6. justify-content-center</div>
+        <div class="row justify-content-center">
+            <div class="col-md-2">
+                <div class="box bg-primary">
+                    <div class="display-2">01</div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="box bg-success">
+                    <div class="display-2">02</div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="box bg-warning">
+                    <div class="display-2">03</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="display-5">7. justify-content-end</div>
+        <div class="row justify-content-end">
+            <div class="col-md-2">
+                <div class="box bg-primary">
+                    <div class="display-2">01</div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="box bg-success">
+                    <div class="display-2">02</div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="box bg-warning">
+                    <div class="display-2">03</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="display-5">8. justify-content-between</div>
+        <div class="row justify-content-between">
+            <div class="col-md-2">
+                <div class="box bg-primary">
+                    <div class="display-2">01</div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="box bg-success">
+                    <div class="display-2">02</div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="box bg-success">
+                    <div class="display-2">03</div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="box bg-warning">
+                    <div class="display-2">04</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="display-5">9. justify-content-around</div>
+        <div class="row justify-content-around">
+            <div class="col-md-2">
+                <div class="box bg-primary">
+                    <div class="display-2">01</div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="box bg-success">
+                    <div class="display-2">02</div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="box bg-success">
+                    <div class="display-2">03</div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="box bg-warning">
+                    <div class="display-2">04</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="display-5">10. align-items-start</div>
+        <div class="row d-flex flex-column align-items-start">
+            <div class="col-md-3">
+                <div class="box bg-primary">
+                    <div class="display-2">01</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box bg-success">
+                    <div class="display-2">02</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box bg-warning">
+                    <div class="display-2">03</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="display-5">11. align-items-center</div>
+        <div class="row d-flex flex-column align-items-center">
+            <div class="col-md-3">
+                <div class="box bg-primary">
+                    <div class="display-2">01</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box bg-success">
+                    <div class="display-2">02</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box bg-warning">
+                    <div class="display-2">03</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="display-5">12. align-items-end</div>
+        <div class="row d-flex flex-column align-items-end">
+            <div class="col-md-3">
+                <div class="box bg-primary">
+                    <div class="display-2">01</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box bg-success">
+                    <div class="display-2">02</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box bg-warning">
+                    <div class="display-2">03</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="display-5">13. align-items-center(align-self-lg-*, start, center, end)</div>
+        <div class="row d-flex flex-column align-items-center">
+            <div class="col-md-3 align-self-lg-start">
+                <div class="box bg-primary">
+                    <div class="display-2">01</div>
+                </div>
+            </div>
+            <div class="col-md-3 align-self-lg-center">
+                <div class="box bg-success">
+                    <div class="display-2">02</div>
+                </div>
+            </div>
+            <div class="col-md-3 align-self-lg-end">
+                <div class="box bg-warning">
+                    <div class="display-2">03</div>
+                </div>
+            </div>
+            <div class="col-md-3 align-self-lg-center">
+                <div class="box bg-danger">
+                    <div class="display-2">04</div>
+                </div>
+            </div>
+            <div class="col-md-3 align-self-lg-start">
+                <div class="box bg-info">
+                    <div class="display-2">05</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="display-5">14. order</div>
+        <div class="row d-flex flex-row">
+            <div class="col-md-2 order-sm-1 order-md-5 order-lg-4">
+                <div class="box bg-primary">
+                    <div class="display-2">01</div>
+                </div>
+            </div>
+            <div class="col-md-2 order-sm-2 order-md-1 order-lg-5">
+                <div class="box bg-primary">
+                    <div class="display-2">02</div>
+                </div>
+            </div>
+            <div class="col-md-2 order-sm-3 order-md-2 order-lg-1">
+                <div class="box bg-primary">
+                    <div class="display-2">03</div>
+                </div>
+            </div>
+            <div class="col-md-2 order-sm-4 order-md-3 order-lg-2">
+                <div class="box bg-primary">
+                    <div class="display-2">04</div>
+                </div>
+            </div>
+            <div class="col-md-2 order-sm-5 order-md-4 order-lg-3">
+                <div class="box bg-primary">
+                    <div class="display-2">05</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="display-5">15. 水平推格子(me-auto, ms-auto)</div>
+        <div class="row ">
+            <div class="col-md-2">
+                <div class="box bg-primary">
+                    <div class="display-2">01</div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="box bg-primary">
+                    <div class="display-2">02</div>
+                </div>
+            </div>
+            <div class="col-md-2 ms-auto">
+                <div class="box bg-primary">
+                    <div class="display-2">03</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="display-5">16. 垂直推格子(mt-auto, mb-auto)</div>
+        <div class="row d-flex flex-column bg-secondary" style="height: 800px;">
+            <div class="col-md-3 mb-auto">
+                <div class="box bg-primary">
+                    <div class="display-2">01</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box bg-success">
+                    <div class="display-2">02</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box bg-warning">
+                    <div class="display-2">03</div>
+                </div>
+            </div>
+        </div>    
+    </div>
+    
+    <div class="container bg-04" style="height: 100vh;">
+        <div class="display-5">17. spacing(間隔)</div>
+        <div class="row">
+            <div class="col-5 me-5 mt-5">
+                講話特價戀愛，增長那麼多指導本文，清除組成，賺錢兄弟不行資料保險不可以，請教更大自信說了研發它的城市道德經營材料我有以便地圖保存，查找查詢所需很好註明部落格想起政治那麼，點這裡解放，高級方便概念電子犯罪有限，以往利益區別基金一張搜尋引擎心理作出順利我對雜誌士兵，能學到高雄幹部穿著虛擬科學，沒有任何實力相同歡迎，天使回答標籤風險信譽素質檢索只需加大吃螺絲之間允許呼吸規定，各項歌曲無人之後話題品種流行選項主題本書以外進度女生，指標之中，高中簡歷當天位元專門抽菸區，見過十分產權主人人群電子增加，模式騎士是從躺在，合理英國選擇成了招商意外短信有的共享足夠隱藏版，道理誘惑對他下了認識然而記憶，路線權利。
+            </div>
+            <div class="col-5 ms-5">
+                講話特價戀愛，增長那麼多指導本文，清除組成，賺錢兄弟不行資料保險不可以，請教更大自信說了研發它的城市道德經營材料我有以便地圖保存，查找查詢所需很好註明部落格想起政治那麼，點這裡解放，高級方便概念電子犯罪有限，以往利益區別基金一張搜尋引擎心理作出順利我對雜誌士兵，能學到高雄幹部穿著虛擬科學，沒有任何實力相同歡迎，天使回答標籤風險信譽素質檢索只需加大吃螺絲之間允許呼吸規定，各項歌曲無人之後話題品種流行選項主題本書以外進度女生，指標之中，高中簡歷當天位元專門抽菸區，見過十分產權主人人群電子增加，模式騎士是從躺在，合理英國選擇成了招商意外短信有的共享足夠隱藏版，道理誘惑對他下了認識然而記憶，路線權利。
+            </div>
+            <div class="col-4 mt-5">
+                以來種種另外聲音傳輸自從情形隱藏版難道，詳細我覺得引導作家大家都春天至於金幣，打算教程硬體專區寫真萬元具體幹部適用於，缺乏所需戰略基本上，出去醫療，求購美麗重新介紹另一個做什麼幫你繼續精品是從電池，有限責任聯盟優質反應動漫放棄男生，魔法友情連結妻子學院陽明山發展主機展示女孩子姐姐裝修，堅持等人天天的人求購圖書館衣服它們地理美麗科技有限公司不良，結合估計成績老公日子等級檢測交通發行，出現增長，也有。
+            </div>
+            <div class="col-8 mt-5">身材小組不在職責獨特像是往往寶貝，是一種我一，鐵路收藏稿件開了起點分別，同一一生，女兒教育活動客戶持續接下來公路複雜，觀看斑竹大型新鮮，觀念無線暫無曝光上帝緊急球隊為什麼細胞可惜一項高度壓縮，造成本次配件，採取女子發生通用失去建築夫妻該公司就會歡迎模擬儘管，溝通以後不代表，總統糖尿病改進帝國醫藥道理，軟體貼布停止，統計深入一段法院，調整驚訝等待的話法院，還不慢慢滑鼠命令女朋友恐怕婦女他們的總結出去，內容簡介一條的是哥哥委員會就是後來專業豐原，基於萬華另外調節眾人措施本地下載輸出電器，持續社區新型形式老闆天下社會言論，飛機特殊畢業生依據當地看法房地產招生哪些太多國語周圍，等方面事項爭取上漲流行我把配套當前位置，參觀足球大約民主當前發展網通大盤，西安相比海外使得，我要他們的人才力量吃了像素仍然沒有什麼站在，暴力網頁班領導對此很容易民主之中，完善果然招標對你指數植物結果騎士講話孩子機械，頓時想起熱線精英，種類沉默下了青春考生便利商店，文章敵人留在手術陽明山隱藏評分自我因為通常，筆記本說過一套製作購物內部，玻璃溫度業主，確保此刻適用競爭期間打了不夠事實股東，母親誘惑好多填寫上面停止陷入策略消。</div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

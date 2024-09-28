@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表單作業-訂便當建檔</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+</head>
+
+<body>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="car">
+                    <div class="car-header text-bg-warning">
+                        <div class="h2 fw-900 text-center">訂便當建檔</div>
+                    </div>
+                </div>
+                <div class="car-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="mb-3">
+                                <label for="p_name" class="form-lable">產品名稱</label>
+                                <input type="text" class="form-control" id="p_name" name="p_name" list="p_name_list"
+                                    placeholder="字數3~10">
+                                <datalist id="p_name_list">
+                                    <option value="雞腿飯">雞腿飯</option>
+                                    <option value="排骨飯">排骨飯</option>
+                                    <option value="番茄燉飯">番茄燉飯</option>
+                                    <option value="炸雞腿飯">炸雞腿飯</option>
+                                    <option value="牛肉燉飯">牛肉燉飯</option>
+                                </datalist>
+                            </div>
+                            <div class="mb-3">
+                                <label for="p_add" class="form-lable">店家名稱</label>
+                                <input type="text" class="form-control" id="p_add" name="p_add" list="p_name_add"
+                                    placeholder="字數3~8">
+                                <datalist id="p_name_list"></datalist>
+                            </div>
+                            <div class="mb-3">
+                                <label for="p_add" class="form-lable">店家地址</label>
+                                <input type="text" class="form-control" id="p_add" name="p_add" list="p_name_add"
+                                    placeholder="字數3~8">
+                                <datalist id="p_name_list"></datalist>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check form-check-inline">
+                                <input type="radio" name="rad_pay" id="" class="form-check-input" value="現金">
+                                <label for="" class="form-check-label">現金</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" name="rad_pay" id="" class="form-check-input" value="刷卡" checked>
+                                <label for="" class="form-check-label">刷卡</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" name="rad_pay" id="" class="form-check-input"
+                                    value="Line Pay">
+                                <label for="" class="form-check-label">line pay</label>
+                            </div>
+                        </div>
+                        <div class="mb-3 form-check form-switch">
+                            <input type="checkbox" class="form-check-input" id="switch01" name="switch01">
+                            <label for="switch01" class="form-check-label">需要外送</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer text-end">
+                    <button class="btn btn-secondary">取消</button>
+                    <button class="btn btn-primary" id="ok_btn">確認</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</body>
+
+</html>

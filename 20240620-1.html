@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旅館民宿 - 觀光資訊資料庫 - 串接資料練習</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+    <style>
+        .box{
+            height: auto;
+            margin-top: 15px;
+            border: 2px solid var(--mycolor01);
+            box-shadow: 2px 2px 2px 2px var(--mycolor02);
+            /* margin-top: 15px; */
+        }
+        .box_text{
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row" id="mydata">
+            <div class="col-sm-6">
+                <div class="box">
+                   <div class="bg-cover" style="background-image: url(https://ezgo.ardswc.gov.tw/Uploads/opendata/TainmaMain01/APPLY_D/20151102181604.jpg);height: 180px;"></div>
+                   <div class="box_text">
+                    <div class="h4">逢甲25行館</div>
+                    <div class="h4">電話:05-7257895</div>
+                    <div class="h4">地址:XXXXXXXXXXXXXX</div>
+                    <div class="h4 text-truncate">簡介:壓力我來意大利很久，你怎不來，添加法律站內夢幻不代表光碟如。</div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        var hotelData;
+        $(function(){
+            //載入旅館資料
+        $.ajax({
+            type: "GET",
+            url: "js/hotel_C_f.json",
+            dataType: "json",
+            success: showdata,
+            error: function(){
+                console.log("連線錯誤-js/hotel_C_f.json");
+            }
+        });
+    });
+
+        function showdata(data){
+            // console.log(data);
+            // console.log(data.XML_Head);
+            // console.log(data.XML_Head.Infos);
+            // console.log(data.XML_Head.Infos,Info);
+            hotelData = data.XML_Head.Infos.Info;
+            console.log(hotelData);
+            //利用周二的框架畫面 顯示出臺中市西屯區的旅館資料
+            $("#mydata").empty();
+            hotelData.forEach(function(item){
+                if(item.Region == '臺中市' && item.Town == '西屯區'){
+                console.log(item);
+                var Dese = item.Description.substring(0,50);
+                var Pic;
+                if(item.Picture1 !=""){
+                    Pic = item.Picture1;
+                } else{
+                    Pic = "images/DSC_0576.JPG";
+                }
+
+
+            var strHTML = '<div class="col-sm-6 col-lg-4 mt-3"><div class="box h-100"><div class="bg-cover" style="background-image: url('+ Pic +');height: 180px;"></div><div class="box_text"><div class="h4">'+item.Name +'</div><div class="h4">電話:' + item.Tel + '</div><div class="h4">地址:'+ item.Add +'</div><div class="h4 text-truncate">簡介:' + Dese +'</div></div></div></div>';
+            $("#mydata").append(strHTML);
+
+            }
+
+
+                
+            });
+
+        }
+
+    </script>
+</body>
+</html>

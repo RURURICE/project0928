@@ -1,0 +1,476 @@
+[
+    {
+        "ID": 1,
+        "ProductName": "巧克力泡芙",
+        "Price": 293.8,
+        "Ingredients": [
+            "奶油",
+            "芝士",
+            "抹茶",
+            "抹茶"
+        ],
+        "Description": "食材天然",
+        "ImagePath": "../images/龜.jpg"
+    },
+    {
+        "ID": 2,
+        "ProductName": "蘋果派",
+        "Price": 293.27,
+        "Ingredients": [
+            "抹茶",
+            "核桃",
+            "雞蛋"
+        ],
+        "Description": "美味可口",
+        "ImagePath": "../images/b2.jpg"
+    },
+    {
+        "ID": 3,
+        "ProductName": "奶酪",
+        "Price": 75.48,
+        "Ingredients": [
+            "芝士",
+            "核桃",
+            "蜂蜜",
+            "糖"
+        ],
+        "Description": "香氣四溢",
+        "ImagePath": "../images/b3.jpg"
+    },
+    {
+        "ID": 4,
+        "ProductName": "蜜糖吐司",
+        "Price": 363.99,
+        "Ingredients": [
+            "糖",
+            "肉桂"
+        ],
+        "Description": "香氣四溢",
+        "ImagePath": "../images/龜.jpg"
+    },
+    {
+        "ID": 5,
+        "ProductName": "巧克力蛋糕",
+        "Price": 113.52,
+        "Ingredients": [
+            "巧克力",
+            "藍莓"
+        ],
+        "Description": "新鮮出爐",
+        "ImagePath": "../images/b3.jpg"
+    },
+    {
+        "ID": 6,
+        "ProductName": "提拉米蘇",
+        "Price": 112.33,
+        "Ingredients": [
+            "肉桂",
+            "雞蛋"
+        ],
+        "Description": "健康美味",
+        "ImagePath": "../images/bired.jpg"
+    },
+    {
+        "ID": 7,
+        "ProductName": "藍莓鬆餅",
+        "Price": 477.43,
+        "Ingredients": [
+            "麵粉",
+            "香蕉",
+            "藍莓",
+            "香蕉"
+        ],
+        "Description": "香甜鬆軟",
+        "ImagePath": "../images/c1.jpg"
+    },
+    {
+        "ID": 8,
+        "ProductName": "酥皮點心",
+        "Price": 114.97,
+        "Ingredients": [
+            "麵粉",
+            "巧克力"
+        ],
+        "Description": "美味可口",
+        "ImagePath": "../images/c1.jpg"
+    },
+    {
+        "ID": 9,
+        "ProductName": "抹茶蛋糕",
+        "Price": 294.14,
+        "Ingredients": [
+            "雞蛋",
+            "草莓"
+        ],
+        "Description": "食材天然",
+        "ImagePath": "../images/c2.jpg"
+    },
+    {
+        "ID": 10,
+        "ProductName": "巧克力蛋糕",
+        "Price": 444.14,
+        "Ingredients": [
+            "草莓",
+            "草莓",
+            "奶油"
+        ],
+        "Description": "健康美味",
+        "ImagePath": "../images/f1.jpg"
+    },
+    {
+        "ID": 11,
+        "ProductName": "藍莓鬆餅",
+        "Price": 347.09,
+        "Ingredients": [
+            "咖啡",
+            "椰子",
+            "麵粉",
+            "椰子"
+        ],
+        "Description": "口感絕佳",
+        "ImagePath": "../images/f1.jpg"
+    },
+    {
+        "ID": 12,
+        "ProductName": "巧克力曲奇",
+        "Price": 66.28,
+        "Ingredients": [
+            "麵粉",
+            "藍莓"
+        ],
+        "Description": "健康美味",
+        "ImagePath": "../images/ll1.jpg"
+    },
+    {
+        "ID": 13,
+        "ProductName": "草莓蛋糕",
+        "Price": 332.96,
+        "Ingredients": [
+            "檸檬",
+            "巧克力",
+            "肉桂",
+            "奶油乳酪",
+            "肉桂"
+        ],
+        "Description": "香甜鬆軟",
+        "ImagePath": "../images/b3.jpg"
+    },
+    {
+        "ID": 14,
+        "ProductName": "芝士蛋糕",
+        "Price": 152.32,
+        "Ingredients": [
+            "核桃",
+            "藍莓",
+            "麵粉"
+        ],
+        "Description": "香甜鬆軟",
+        "ImagePath": "../images/龜.jpg"
+    },
+    {
+        "ID": 15,
+        "ProductName": "焦糖布丁",
+        "Price": 415.65,
+        "Ingredients": [
+            "咖啡",
+            "咖啡"
+        ],
+        "Description": "香氣四溢",
+        "ImagePath": "../images/b3.jpg"
+    },
+    {
+        "ID": 16,
+        "ProductName": "抹茶蛋糕",
+        "Price": 470.09,
+        "Ingredients": [
+            "芝士",
+            "椰子"
+        ],
+        "Description": "獨特風味",
+        "ImagePath": "../images/龜.jpg"
+    },
+    {
+        "ID": 17,
+        "ProductName": "巧克力蛋糕",
+        "Price": 434.6,
+        "Ingredients": [
+            "紅豆",
+            "咖啡",
+            "奶酪"
+        ],
+        "Description": "精緻甜點",
+        "ImagePath": "../images/b3.jpg"
+    },
+    {
+        "ID": 18,
+        "ProductName": "肉桂捲",
+        "Price": 127.22,
+        "Ingredients": [
+            "抹茶",
+            "奶油"
+        ],
+        "Description": "香氣四溢",
+        "ImagePath": "../images/龜.jpg"
+    },
+    {
+        "ID": 19,
+        "ProductName": "馬卡龍",
+        "Price": 357.88,
+        "Ingredients": [
+            "糖",
+            "紅豆"
+        ],
+        "Description": "香氣四溢",
+        "ImagePath": "../images/b3.jpg"
+    },
+    {
+        "ID": 20,
+        "ProductName": "咖啡蛋糕",
+        "Price": 466.24,
+        "Ingredients": [
+            "糖",
+            "蜂蜜",
+            "芝士"
+        ],
+        "Description": "健康美味",
+        "ImagePath": "../images/龜.jpg"
+    },
+    {
+        "ID": 21,
+        "ProductName": "巧克力曲奇",
+        "Price": 56.25,
+        "Ingredients": [
+            "糖",
+            "香蕉",
+            "藍莓"
+        ],
+        "Description": "食材天然",
+        "ImagePath": "../images/b3.jpg"
+    },
+    {
+        "ID": 22,
+        "ProductName": "紅豆包",
+        "Price": 308.85,
+        "Ingredients": [
+            "麵粉",
+            "奶油",
+            "香蕉",
+            "檸檬"
+        ],
+        "Description": "獨特風味",
+        "ImagePath": "../images/龜.jpg"
+    },
+    {
+        "ID": 23,
+        "ProductName": "巧克力曲奇",
+        "Price": 233.58,
+        "Ingredients": [
+            "肉桂",
+            "檸檬",
+            "糖"
+        ],
+        "Description": "香氣四溢",
+        "ImagePath": "../images/b3.jpg"
+    },
+    {
+        "ID": 24,
+        "ProductName": "巧克力曲奇",
+        "Price": 158.53,
+        "Ingredients": [
+            "牛奶",
+            "奶油乳酪",
+            "抹茶",
+            "肉桂"
+        ],
+        "Description": "健康美味",
+        "ImagePath": "../images/龜.jpg"
+    },
+    {
+        "ID": 25,
+        "ProductName": "抹茶蛋糕",
+        "Price": 432.79,
+        "Ingredients": [
+            "牛奶",
+            "麵粉",
+            "麵粉"
+        ],
+        "Description": "香甜鬆軟",
+        "ImagePath": "../images/b3.jpg"
+    },
+    {
+        "ID": 26,
+        "ProductName": "抹茶蛋糕",
+        "Price": 56.85,
+        "Ingredients": [
+            "草莓",
+            "咖啡"
+        ],
+        "Description": "食材天然",
+        "ImagePath": "../images/龜.jpg"
+    },
+    {
+        "ID": 27,
+        "ProductName": "法式長棍",
+        "Price": 343.09,
+        "Ingredients": [
+            "奶油乳酪"
+        ],
+        "Description": "食材天然",
+        "ImagePath": "../images/龜.jpg"
+    },
+    {
+        "ID": 28,
+        "ProductName": "法式長棍",
+        "Price": 214.28,
+        "Ingredients": [
+            "草莓",
+            "巧克力"
+        ],
+        "Description": "精緻甜點",
+        "ImagePath": "../images/b3.jpg"
+    },
+    {
+        "ID": 29,
+        "ProductName": "肉桂捲",
+        "Price": 103.33,
+        "Ingredients": [
+            "奶油",
+            "檸檬",
+            "檸檬"
+        ],
+        "Description": "香氣四溢",
+        "ImagePath": "../images/龜.jpg"
+    },
+    {
+        "ID": 30,
+        "ProductName": "牛角包",
+        "Price": 156.16,
+        "Ingredients": [
+            "蜂蜜",
+            "香蕉",
+            "紅豆",
+            "藍莓"
+        ],
+        "Description": "健康美味",
+        "ImagePath": "../images/b3.jpg"
+    },
+    {
+        "ID": 31,
+        "ProductName": "馬卡龍",
+        "Price": 459.08,
+        "Ingredients": [
+            "椰子",
+            "奶油乳酪",
+            "抹茶",
+            "肉桂"
+        ],
+        "Description": "口感絕佳",
+        "ImagePath": "../images/龜.jpg"
+    },
+    {
+        "ID": 32,
+        "ProductName": "牛角包",
+        "Price": 131.52,
+        "Ingredients": [
+            "奶酪",
+            "草莓"
+        ],
+        "Description": "口感絕佳",
+        "ImagePath": "../images/b3.jpg"
+    },
+    {
+        "ID": 33,
+        "ProductName": "豆乳蛋糕",
+        "Price": 402.72,
+        "Ingredients": [
+            "抹茶",
+            "檸檬"
+        ],
+        "Description": "食材天然",
+        "ImagePath": "../images/龜.jpg"
+    },
+    {
+        "ID": 34,
+        "ProductName": "瑪芬",
+        "Price": 442.92,
+        "Ingredients": [
+            "蜂蜜",
+            "奶油乳酪",
+            "核桃",
+            "香蕉"
+        ],
+        "Description": "美味可口",
+        "ImagePath": "../images/龜.jpg"
+    },
+    {
+        "ID": 35,
+        "ProductName": "咖啡蛋糕",
+        "Price": 245.65,
+        "Ingredients": [
+            "蜂蜜"
+        ],
+        "Description": "香甜鬆軟",
+        "ImagePath": "../images/b3.jpg"
+    },
+    {
+        "ID": 36,
+        "ProductName": "鳳梨酥",
+        "Price": 201.49,
+        "Ingredients": [
+            "草莓",
+            "奶油乳酪",
+            "咖啡",
+            "巧克力",
+            "紅豆"
+        ],
+        "Description": "口感絕佳",
+        "ImagePath": "../images/龜.jpg"
+    },
+    {
+        "ID": 37,
+        "ProductName": "馬卡龍",
+        "Price": 157.42,
+        "Ingredients": [
+            "抹茶"
+        ],
+        "Description": "精緻甜點",
+        "ImagePath": "../images/龜.jpg"
+    },
+    {
+        "ID": 38,
+        "ProductName": "巧克力布朗尼",
+        "Price": 55.22,
+        "Ingredients": [
+            "椰子",
+            "糖",
+            "雞蛋",
+            "蜂蜜",
+            "奶油乳酪"
+        ],
+        "Description": "香甜鬆軟",
+        "ImagePath": "../images/b3.jpg"
+    },
+    {
+        "ID": 39,
+        "ProductName": "馬卡龍",
+        "Price": 297.44,
+        "Ingredients": [
+            "糖",
+            "巧克力",
+            "糖"
+        ],
+        "Description": "精緻甜點",
+        "ImagePath": "../images/龜.jpg"
+    },
+    {
+        "ID": 40,
+        "ProductName": "草莓派",
+        "Price": 120.86,
+        "Ingredients": [
+            "肉桂",
+            "核桃"
+        ],
+        "Description": "獨特風味",
+        "ImagePath": "../images/b3.jpg"
+    }
+]

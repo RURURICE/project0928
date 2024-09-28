@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ch6 欄與列</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+    <style>
+        .box{
+        height: 200px;
+        margin-top: 15px;
+        }
+</style>
+</head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-2">
+          <div class="box bg-success"></div>
+        </div>
+        <div class="col-2">
+          <div class="box bg-success"></div>
+        </div>
+        <div class="col-2">
+          <div class="box bg-success"></div>
+        </div>
+        <div class="col-2">
+          <div class="box bg-success"></div>
+        </div>
+        <div class="col-2">
+          <div class="box bg-success"></div>
+        </div>
+        <div class="col-2">
+          <div class="box bg-success"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3">
+          <div class="box bg-primary"></div>
+        </div>
+        <div class="col-3">
+          <div class="box bg-primary"></div>
+        </div>
+        <div class="col-3">
+          <div class="box bg-primary"></div>
+        </div>
+        <div class="col-3">
+          <div class="box bg-primary"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <div class="box bg-danger"></div>
+        </div>
+        <div class="col-4">
+          <div class="box bg-danger"></div>
+        </div>
+        <div class="col-4">
+          <div class="box bg-danger"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+            <div class="box bg-info"></div>
+        </div>
+        <div class="col-6">
+            <div class="box bg-info"></div>
+        </div>
+      </div>
+      <h2>隨便切</h2>
+      <div class="row">
+        <div class="col-2">
+            <div class="box bg-warning"></div>
+        </div>
+        <div class="col-3">
+            <div class="box bg-warning"></div>
+        </div>
+        <div class="col-5">
+            <div class="box bg-warning"></div>
+        </div>
+        <div class="col-2">
+            <div class="box bg-warning"></div>
+        </div>
+      </div>
+      <h2>不給欄寬，只寫要幾個，如col*6。會自動分配</h2>
+      <div class="row">
+        <div class="col">
+            <div class="box bg-secondary"></div>
+        </div>
+        <div class="col">
+            <div class="box bg-secondary"></div>
+        </div>
+        <div class="col">
+            <div class="box bg-secondary"></div>
+        </div>
+        <div class="col">
+            <div class="box bg-secondary"></div>
+        </div>
+        <div class="col">
+            <div class="box bg-secondary"></div>
+        </div>
+        <div class="col">
+            <div class="box bg-secondary"></div>
+        </div>  
+      </div>
+      <h2>col-auto，欄寬隨內容多寡決定</h2>
+      <div class="row">
+        <div class="col-auto">
+            <div class="box bg-primary">反應透露網路降低瀏覽強調辦理組合，具體。</div>
+        </div>
+        <div class="col-auto">
+            <div class="box bg-primary">反應透露網路降低瀏覽</div>
+        </div>
+      </div>
+      <h2>巢狀排版，row中還有row。加一個row，就重新切12格。</h2>
+      <div class="row">
+        <div class="col-2">
+            <div class="box bg-success"></div>
+        </div>
+        <div class="col-10 bg-info">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="box bg-warning"></div>
+                    </div>
+                    <div class="col-4">
+                        <div class="box bg-warning"></div>
+                    </div>
+                    <div class="col-4">
+                        <div class="box bg-warning"></div>
+                    </div>
+                    <div class="col-4">
+                        <div class="box bg-warning"></div>
+                    </div>
+                    <div class="col-4">
+                        <div class="box bg-warning"></div>
+                    </div>
+                    <div class="col-4">
+                        <div class="box bg-warning"></div>
+                    </div>
+                    <div class="col-4">
+                        <div class="box bg-warning"></div>
+                    </div>
+                    <div class="col-4">
+                        <div class="box bg-warning"></div>
+                    </div>
+                    <div class="col-4">
+                        <div class="box bg-warning"></div>
+                    </div>
+                </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

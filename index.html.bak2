@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/myall.css">
+    <title>我的首頁</title>
+    <style>
+        .section01{
+            height: 100vh;
+            position: relative;
+        }
+        .box01{
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            top: 0;
+            left: 0;
+        }
+        .box02{
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            top: 0;
+            right: 0;
+        }
+        .box03{
+            position: absolute;
+            width:180px;
+            width: 180px;
+            bottom: 0;
+            left: 0;
+        }
+        .box04{
+        position: absolute;
+            width:180px;
+            width: 180px;
+            bottom: 0;
+            right: 0;
+        }
+        .logo{
+            position: absolute;
+            top: 30px;
+            bottom: 30px;
+            left: 30px;
+            right: 30px;
+            background-image: url(images/120335823_2792065834399208_1064175390410996536_n.jpg);
+            background-position: center center;
+            background-size: cover;
+            border-radius: 20px;
+        }    
+
+    </style>
+</head>
+<body>
+    <div class="section01 bg02">
+        <div class="box01 bg-01">01</div>
+        <div class="box02 bg-01">02</div>
+        <div class="box03 bg-01">03</div>
+        <div class="box04 bg-01">04</div>
+        <div class="logo bg-btn03"></div>
+    </div>
+<!-- <a href="202405/20240604-1html" target="_blank"> css語法練習<a> -->
+</body>
+</html>

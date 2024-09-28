@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML and CSS語法練習- 最新消息</title>
+    <link rel="stylesheet" href="css/myall.css">
+    <style>
+        .wrapper {
+            width: 1024px;
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .logo {
+            height: 520px;
+            background-image: url(images/logo.JPG);
+            background-position: center center;
+            background-size: cover;
+        }
+
+        nav {
+            margin-top: 5px;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        nav ul {
+            display: inline-block;
+        }
+
+        nav ul li {
+            float: left;
+            list-style-type: none;
+        }
+
+        nav ul li a {
+            display: block;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 20px;
+            padding-right: 20px;
+            text-decoration: none;
+        }
+
+        .content_in{
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        .content_in .box{
+            display: inline-block;
+            width: 32%;
+        }
+
+        .content_in .box .box_in{
+            position: relative;
+            width: 100%;
+            height: auto;
+            background-color: #a0d8cf;
+            overflow: hidden;
+        }
+
+        .content_in .box .box_in .roller{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.2);
+            top: -100%;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .content_in .box .box_in:hover .roller{
+            top: 0;
+            transition: top 2s;
+        }
+
+        .content_in .box .box_in_text h2, h4{
+            padding: 0;
+            margin: 5px;
+        }
+
+        .content_in .box .box_in_text{
+            padding: 15px;
+        }
+
+        .footer {
+            margin-top: 5px;
+            text-align: center;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body class="bg-02">
+    <div class="wrapper">
+        <div class="banner">
+            <div class="logo"></div>
+            <nav class="bg-03">
+                <ul>
+                    <li><a href="20240604-1.html" class="bg-btn01">首頁</a></li>
+                    <li><a href="20240604-2.html" class="bg-btn01">最新消息</a></li>
+                    <li><a href="20240604-3.html" class="bg-btn02">合作店家</a></li>
+                    <li><a href="#" class="bg-btn01">關於我們</a></li>
+                    <li><a href="#" class="bg-btn01">聯絡我們</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="content">
+            <div class="content_in">
+                <div class="box">
+                    <div class="box_in">
+                        <div class="roller">
+                            <a href="#" class="bg-btn03">查看更多</a>
+                        </div>
+                        <div style="background-image: url(images/0.1\ .JPG); height: 200px; background-position: center center; background-size: cover;"></div>
+                        <div class="box_in_text">
+                            <h2>廠商名稱001</h2>
+                            <h4>電話: XXXXXXX</h4>
+                            <h4>地址: XXXXXX</h4>
+                            <h4>簡介: 篇文章還能一聲，產業放心要求突破，才能越來越，地方比較，不。</h4>         
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box_in">
+                        <div class="roller">
+                            <a href="#" class="bg-btn03">查看更多</a>
+                        </div>
+                        <div style="background-image: url(images/0.2.JPG); height: 200px; background-position: center center; background-size: cover;"></div>
+                        <div class="box_in_text">
+                            <h2>廠商名稱001</h2>
+                            <h4>電話: XXXXXXX</h4>
+                            <h4>地址: XXXXXX</h4>
+                            <h4>簡介: 篇文章還能一聲，產業放心要求突破，才能越來越，地方比較，不。</h4>         
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box_in">
+                        <div class="roller">
+                            <a href="#">查看更多</a>
+                        </div>
+                        <div style="background-image: url(images/0.3.JPG); height: 200px; background-position: center center; background-size: cover;"></div>
+                        <div class="box_in_text">
+                            <h2>廠商名稱001</h2>
+                            <h4>電話: XXXXXXX</h4>
+                            <h4>地址: XXXXXX</h4>
+                            <h4>簡介: 篇文章還能一聲，產業放心要求突破，才能越來越，地方比較，不。</h4>         
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box_in">
+                        <div class="roller">
+                            <p>這是一個卷軸</p>
+                        </div>
+                        <div style="background-image: url(images/0.4.JPG); height: 200px; background-position: center center; background-size: cover;"></div>
+                        <div class="box_in_text">
+                            <h2>廠商名稱001</h2>
+                            <h4>電話: XXXXXXX</h4>
+                            <h4>地址: XXXXXX</h4>
+                            <h4>簡介: 篇文章還能一聲，產業放心要求突破，才能越來越，地方比較，不。</h4>         
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box_in">
+                        <div class="roller">
+                            <p>這是一個卷軸</p>
+                        </div>
+                        <div style="background-image: url(images/0.5.HEIC); height: 200px; background-position: center center; background-size: cover;"></div>
+                        <div class="box_in_text">
+                            <h2>廠商名稱001</h2>
+                            <h4>電話: XXXXXXX</h4>
+                            <h4>地址: XXXXXX</h4>
+                            <h4>簡介: 篇文章還能一聲，產業放心要求突破，才能越來越，地方比較，不。</h4>         
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box_in">
+                        <div class="roller">
+                            <p>這是一個卷軸</p>
+                        </div>
+                        <div style="background-image: url(images/0.6.JPG); height: 200px; background-position: center center; background-size: cover;"></div>
+                        <div class="box_in_text">
+                            <h2>廠商名稱001</h2>
+                            <h4>電話: XXXXXXX</h4>
+                            <h4>地址: XXXXXX</h4>
+                            <h4>簡介: 篇文章還能一聲，產業放心要求突破，才能越來越，地方比較，不。</h4>         
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer bg-03">
+            <p>雲端技術應用實務班製作 2024.06</p>
+        </div>
+    </div>
+<body>
+    
+</body>
+</html>

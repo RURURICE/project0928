@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ch.5 表格</title>
+    <link rel="stylesheet" href="css/myall.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .table-mycolor{
+            background-color: #352929;
+            color: aliceblue;
+        }
+        @media screen and (max-width:768px){
+            .table-rwd thead{
+                display: none;
+            }
+        .table-rwd tbody tr{
+            display:block;
+            margin-top: 15px;
+            border: 5px solid var(--myclor01);
+            }    
+        .table-rwd tbody tr td{
+            display:block;
+            overflow: hidden;
+            }
+        .table-rwd tbody tr td::before{
+            content: attr(data-th)" : ";
+            color: var(--mytextcolor03);
+            font-weight: bolder;
+            font-size: 22px;
+            display: block;
+            float: left;
+            width: 30%;
+            text-align: right;
+            padding-right: 15px;
+            }
+        .table-rwd tbody tr td span.table-col{
+            display: block;
+            float:left;
+            width: 70%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contairner">
+        <table class="table table-striped table-hover table-bordered table-sm border-info table-rwd">
+            <caption>產品列表</caption>
+            <thead class="table-dark">
+                <tr>
+                    <th>商品編號</th>
+                    <th>商品名稱</th>
+                    <th>商品價格</th>
+                    <th>商品數量</th>
+                    <th>商品備註</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-th="商品編號"><span class="table-col">001</span></td>
+                    <td data-th="商品名稱"><span class="table-col">美式咖啡</span></td>
+                    <td data-th="商品價格"><span class="table-col">60</span></td>
+                    <td data-th="商品數量"><span class="table-col">60</span></td>
+                    <td data-th="商品備註"><span class="table-col">無糖去冰 女生內部貨幣明白她說，圖書館種子均為人才參加，尊重天空上了法律責任道德請在無法各國，市場價立場我還並不怎麼後悔彼此組成，本書也許幾天堅持接受農村他對世界上含有前往存儲其實說著我愛，日報本網站這是推坑王放棄聯繫方式典型接着展開，什麼我和，您是男性不得不，高。</span></td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>拿鐵咖啡</td>
+                    <td>60</td>
+                    <td>60</td>
+                    <td>半糖去冰</td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>拿鐵咖啡</td>
+                    <td>60</td>
+                    <td>60</td>
+                    <td>半糖去冰</td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>拿鐵咖啡</td>
+                    <td>60</td>
+                    <td>60</td>
+                    <td>半糖去冰</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

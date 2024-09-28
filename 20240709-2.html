@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ch11.表單 - 練習</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+</head>
+
+<body>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header text-bg-warning">
+                        <div class="h2 fw-900 text-center">飲料訂購</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="p_name" class="form-label">產品名稱</label>
+                                    <input type="text" class="form-control" id="p_name" name="p_name" list="p_name_list"
+                                        placeholder="字數3~6">
+                                    <datalist id="p_name_list">
+                                        <option value="紅茶">紅茶</option>
+                                        <option value="奶茶">奶茶</option>
+                                        <option value="綠茶">綠茶</option>
+                                        <option value="珍珠奶茶">珍珠奶茶</option>
+                                        <option value="紅茶拿鐵">紅茶拿鐵</option>
+                                    </datalist>
+                                    <div class="valid-feedback">輸入符合規定</div>
+                                    <div class="invalid-feedback">輸入符合規定</div>
+                                </div>
+                                <div class="mb-3">
+                                    <select name="ice" id="ice" class="form-select is-invalid">
+                                        <option value="" selected disabled>---請選擇冰塊---</option>
+                                        <option value="全冰">全冰</option>
+                                        <option value="少冰">少冰</option>
+                                        <option value="微冰">微冰</option>
+                                        <option value="去冰">去冰</option>
+                                    </select>
+                                    <div class="valid-feedback">已選擇冰塊</div>
+                                    <div class="invalid-feedback">未選擇冰塊</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="" class="form-label">單點配料:</label>
+                                    <div class="form-check">
+                                        <input type="checkbox" name="check01" id="" class="form-check-input" value="粉圓">
+                                        <label for="" class="form-check-label">粉圓</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" name="check01" id="" class="form-check-input" value="愛玉">
+                                        <label for="" class="form-check-label">愛玉</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" name="check01" id="" class="form-check-input" value="QQ">
+                                        <label for="" class="form-check-label">QQ</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" name="check01" id="" class="form-check-input" value="紅豆">
+                                        <label for="" class="form-check-label">紅豆</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="p_num" class="form-label">數量: <span class="text-danger h3 fw-900"
+                                        id="p_num_text">1</span> (杯)</label>
+                                <input type="range" class="form-range" min="1" max="100" step="1" id="p_num"
+                                    name="p_num" value="1">
+                            </div>
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <div class="input-group">
+                                        <label for="tel" class="input-group-text">09</label>
+                                        <input type="phone" name="tel" id="tel" class="form-control"
+                                            placeholder="請輸入電話後8碼">
+                                        <div class="valid-feedback">輸入符合規定</div>
+                                        <div class="invalid-feedback">輸入符合規定</div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" name="rad_pay" id="" class="form-check-input" value="現金">
+                                        <label for="" class="form-check-label">現金</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" name="rad_pay" id="" class="form-check-input" value="刷卡" checked>
+                                        <label for="" class="form-check-label">刷卡</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" name="rad_pay" id="" class="form-check-input"
+                                            value="Line Pay">
+                                        <label for="" class="form-check-label">line pay</label>
+                                    </div>
+                                </div>
+                                <div class="mb-3 form-check form-switch">
+                                    <input type="checkbox" class="form-check-input" id="switch01" name="switch01">
+                                    <label for="switch01" class="form-check-label">需要外送</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-end">
+                        <button class="btn btn-secondary">取消</button>
+                        <button class="btn btn-primary" id="ok_btn">確認</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header text-bg-success">
+                        <h3 class="text-center">訂購明細</h3>
+                    </div>
+                    <div class="card-body" id="showlist">
+                        <div class="card-text">產品名稱: XXX</div>
+                        <div class="card-text">產品數量: XXX</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        var switch01; //紀錄外送狀態
+        var flag_p_name = false;
+        var flag_p_ice = false;
+        var flag_p_tel = false;
+        $(function () {
+            //#p_name 即時監聽
+            $("#p_name").bind("input propertychange", function () {
+                console.log($(this).val().length);
+                if ($(this).val().length > 2 && $(this).val().length < 7) {
+                    //符合規定
+                    $(this).removeClass("is-invalid");
+                    $(this).addClass("is-valid");
+                    flag_p_name = true;
+                } else {
+                    //不符合規定
+                    $(this).removeClass("is-valid");
+                    $(this).addClass("is-invalid");
+                    flag_p_name = false;
+                }
+            });
+
+            //#tel 即時監聽
+            $("#tel").bind("input propertychange", function () {
+                console.log($(this).val().length);
+                if ($(this).val().length == 8) {
+                    //符合規定
+                    $(this).removeClass("is-invalid");
+                    $(this).addClass("is-valid");
+                    flag_p_tel = true;
+                } else {
+                    //不符合規定
+                    $(this).removeClass("is-valid");
+                    $(this).addClass("is-invalid");
+                    flag_p_tel = false;
+                }
+            });
+
+            //#ice 監聽
+            $("#ice").change(function () {
+                console.log($(this).val());
+                if ($(this).val() != "") {
+                    $(this).removeClass("is-invalid");
+                    $(this).addClass("is-valid");
+                    flag_p_ice = true;
+                }
+            });
+
+            //數量
+            $("#p_num").bind("input propertychange", function () {
+                // console.log($(this).val());
+                $("#p_num_text").html($(this).val());
+            });
+
+            //需要外送 switch
+            $("#switch01").change(function () {
+                console.log($(this).is(':checked'));
+                if ($(this).is(':checked')) {
+                    //需要外送
+                    $(this).next().html('<span class="text-primary">需要外送</span>');
+                    switch01 = '需要外送';
+                } else {
+                    //不需要外送
+                    $(this).next().html('<span class="text-warning">不需要外送</span>');
+                    switch01 = '不需要外送';
+                }
+            });
+
+            $("#ok_btn").click(function () {
+                if(flag_p_name && flag_p_ice && flag_p_tel){
+                    console.log($("#p_name").val() + $("#p_num").val() + "杯");
+                    $("#showlist").empty();
+
+                    //收集單點配料 checkbox
+                    var chkArray = [];
+
+                    $.each($("input[name='check01']:checked"), function () {
+                        chkArray.push($(this).val());
+                    });
+
+                    if (chkArray.length == 0) {
+                        chkArray.push("不加料");
+                    }
+                    console.log(chkArray.join(", "));
+
+                    //付款方式
+                    var rad_pay; //紀錄付款方式
+                    $.each($("input[name='rad_pay']:checked"), function () {
+                        rad_pay = $(this).val();
+                    });
+
+                    var strHTML = '<div class="card-text">產品名稱: ' + $("#p_name").val() + '</div><div class="card-text">產品冰塊:' + $("#ice").val() + '</div><div class="card-text">單點配料:' + chkArray.join(", ") + '</div><div class="card-text">產品數量: ' + $("#p_num").val() + '</div><div class="card-text">電話:09' + $("#tel").val() + '</div><div class="card-text"> 付款方式: ' + rad_pay + ' </div><div class="card-text"> ' + switch01 + ' </div>';
+                    $("#showlist").html(strHTML);
+                }else{
+                    alert("欄位有錯, 請修正!");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

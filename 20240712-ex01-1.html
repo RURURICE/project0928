@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表單 練習01</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 p-5">
+                <div class="card shadow-lg">
+                    <div class="card-header text-center fw-900 h1 text-bg-warning">表單作業-訂便當建檔</div>
+                    <div class="card-body">
+                        <div class="mb-3 form-floating">
+                            <input type="text" name="p_name" id="p_name" class="form-control is-invalid" placeholder=""
+                                list="p_name_datalist">
+                            <label for="p_name" class="form-label">產品名稱(字數3~10)</label>
+                            <datalist id="p_name_datalist">
+                                <option value="推薦001">推薦001</option>
+                                <option value="推薦002">推薦002</option>
+                                <option value="推薦003">推薦003</option>
+                                <option value="推薦004">推薦004</option>
+                                <option value="推薦005">推薦005</option>
+                            </datalist>
+                            <div class="valid-feedback">符合規定</div>
+                            <div class="invalid-feedback">不符合規定</div>
+                        </div>
+
+                        <div class="mb-3 form-floating">
+                            <input type="text" name="p_store_name" id="p_store_name" class="form-control is-invalid"
+                                placeholder="">
+                            <label for="p_store_name" class="form-label">店家名稱(字數3~8)</label>
+                            <div class="valid-feedback">符合規定</div>
+                            <div class="invalid-feedback">不符合規定</div>
+                        </div>
+
+                        <div class="mb-3 form-floating">
+                            <input type="text" name="p_addr" id="p_addr" class="form-control is-invalid" placeholder="">
+                            <label for="p_addr" class="form-label">店家地址(不可以空白)</label>
+                            <div class="valid-feedback">符合規定</div>
+                            <div class="invalid-feedback">不符合規定</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <select name="p_food" id="p_food" class="form-select form-select-lg is-invalid">
+                                <option value="" selected disabled>---請選擇主菜---</option>
+                                <option value="雞腿">雞腿</option>
+                                <option value="排骨01">排骨01</option>
+                                <option value="排骨02">排骨02</option>
+                                <option value="排骨03">排骨03</option>
+                            </select>
+                            <div class="valid-feedback">符合規定</div>
+                            <div class="invalid-feedback">不符合規定</div>
+                        </div>
+
+
+                        <div class="my-3">
+                            <label for="" class="form-label fw-900">附加項</label>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="p_chk01" name="p_chk" value="飲料">
+                                <label for="p_chk01" class="form-check-label">飲料</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="p_chk02" name="p_chk" value="湯">
+                                <label for="p_chk02" class="form-check-label">湯</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="p_chk03" name="p_chk" value="餐具">
+                                <label for="p_chk03" class="form-check-label">餐具</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="p_chk04" name="p_chk" value="配菜">
+                                <label for="p_chk04" class="form-check-label">配菜</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="" class="form-label fw-900">付款方式</label>
+                            <br>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" name="rad_pay" id="" class="form-check-input" value="現金">
+                                <label for="" class="form-check-label">現金</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" name="rad_pay" id="" class="form-check-input" value="刷卡" checked>
+                                <label for="" class="form-check-label">刷卡</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" name="rad_pay" id="" class="form-check-input" value="Line Pay">
+                                <label for="" class="form-check-label">line pay</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="form-check form-switch">
+                                <input type="checkbox" name="switch01" id="switch01" class="form-check-input">
+                                <label for="switch01" class="form-check-label">需要購物袋</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="p_num" class="form-label">數量: <span class="text-danger h3 fw-900"
+                                    id="p_num_text">1</span> (個)</label>
+                            <input type="range" class="form-range" min="1" max="100" step="1" id="p_num" name="p_num"
+                                value="1">
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input type="checkbox" name="check02" id="check02" class="form-check-input">
+                                <label for="check02" class="form-check-label">遵守誠信原則</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-center">
+                        <button class="btn btn-secondary">取消</button>
+                        <button class="btn btn-success" id="ok_btn">確認</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header text-bg-success">
+                        <h3 class="text-center">訂購明細</h3>
+                    </div>
+                    <div class="card-body" id="showlist">
+                        <div class="card-text">產品名稱: XXX</div>
+                        <div class="card-text">產品數量: XXX</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function () {
+            //產品名稱(字數3~10)
+            $("#p_name").bind("input propertychange", function () {
+                if ($(this).val().length > 2 && $(this).val().length < 11) {
+                    //符合規定
+                    $(this).removeClass("is-invalid");
+                    $(this).addClass("is-valid");
+                } else {
+                    //不符合規定
+                    $(this).removeClass("is-valid");
+                    $(this).addClass("is-invalid");
+                }
+            });
+
+            //店家名稱(字數3~8)
+            $("#p_store_name").bind("input propertychange", function () {
+                if ($(this).val().length > 2 && $(this).val().length < 9) {
+                    //符合規定
+                    $(this).removeClass("is-invalid");
+                    $(this).addClass("is-valid");
+                } else {
+                    //不符合規定
+                    $(this).removeClass("is-valid");
+                    $(this).addClass("is-invalid");
+                }
+            });
+
+            //店家地址(不可以空白)
+            $("#p_addr").bind("input propertychange", function () {
+                if ($(this).val().length > 0) {
+                    //符合規定
+                    $(this).removeClass("is-invalid");
+                    $(this).addClass("is-valid");
+                } else {
+                    //不符合規定
+                    $(this).removeClass("is-valid");
+                    $(this).addClass("is-invalid");
+                }
+            });
+
+            //主菜select
+            $("#p_food").change(function () {
+                if ($(this).val() != "") {
+                    //符合規定
+                    $(this).removeClass("is-invalid");
+                    $(this).addClass("is-valid");
+                } else {
+                    //不符合規定
+                    $(this).removeClass("is-valid");
+                    $(this).addClass("is-invalid");
+                }
+            });
+
+            //附加項 checkbox
+            var p_chkArray = [];
+            $.each($("input[name='p_chk']:checked"), function(){
+               p_chkArray.push($(this).val());
+            });
+
+            //付款 radio
+            var rad_pay;
+            $.each($("input[name='rad_pay']:checked"), function(){
+                rad_pay = $(this).val();
+            });
+
+            //需要購物袋 switch
+            var switch01_text;
+            $("#switch01").change(function(){
+                if($(this).is(":checked")){
+                    //需要購物袋
+                    $(this).next().html('<span class="h5 text-warning"> 需要購物袋 </span>');
+                    switch01_text = '需要購物袋';
+                }else{
+                    //不需要購物袋
+                    $(this).next().html('<span class="h5 text-success"> 不需要購物袋 </span>');
+                    switch01_text = '不需要購物袋';
+                }
+            });
+
+            //數量p_num
+            var p_num;
+            $("#p_num").bind("input propertychange", function(){
+                $("#p_num_text").text($(this).val()); 
+                p_num = $(this).val();
+            });
+
+            //遵守誠信原則
+            $("#check02").change(function(){
+                if($(this).is(':checked')){
+                    $(this).next().html('<span class="h4 text-success">遵守誠信原則</span>')
+                }else{
+                    $(this).next().html('<span class="h4 text-danger">不遵守誠信原則</span>')
+                }
+            });
+
+            //ok_btn
+            $("#ok_btn").click(function(){
+                if($("#check02").is(':checked')){
+                    //****************************
+
+
+
+
+                }else{
+                    alert("必須先勾選遵守誠信原則!");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

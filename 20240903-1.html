@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資料結構重整(重構)</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-10">
+                <div class="card">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var regionTitle = [];
+        var counter = [];
+        var regionData = [];
+        var mychart;
+        $(function () {
+            $.ajax({
+                type: "GET",
+                url: "hoteldata_Read-api.php",
+                dataType: "json",
+                success: showdata,
+                error: function () {
+                    alert("error-hoteldata_Read-api.php");
+                }
+            });
+
+            //chartjs
+            const ctx = document.getElementById('myChart');
+
+            mychart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                    datasets: [{
+                        label: '# of Votes',
+                        data: [12, 19, 3, 5, 2, 3],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        });
+        function showdata(data) {
+            console.log(data);
+            data.data.forEach(function (item) {
+                console.log(item.display_addr);
+                console.log(item.display_addr.indexOf('區', 0));
+                console.log(item.display_addr.substring(0, item.display_addr.indexOf('區', 0) + 1));
+                var getRegion = item.display_addr.substring(0, item.display_addr.indexOf('區', 0) + 1);
+                if (counter[getRegion] == undefined) {
+                    counter[getRegion] = regionData.length;
+                    regionData.push(new Array());
+                    regionTitle[counter[getRegion]] = getRegion;
+                }
+                regionData[counter[getRegion]].push(item);
+            });
+            console.log(regionTitle);
+            console.log(counter);
+            console.log(regionData);
+
+            //清空chartjs 數據
+            mychart.data.labels = [];
+            mychart.data.datasets[0].data = [];
+
+            //加入區域名稱(x軸)和數量(y軸)
+            regionTitle.forEach(function(item){
+                console.log(item);
+                mychart.data.labels.push(item); // x軸
+                mychart.data.datasets[0].data.push(regionData[counter[item]].length);
+            });
+
+            mychart.update();
+        }
+    </script>
+</body>
+
+</html>

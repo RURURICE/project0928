@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ch11.表單</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="display-2 fw-900 my-3">1.表單樣式</div>
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <div class="card">
+                    <div class="car-body">
+                        <div class="mb-3">
+                            <label for="username" class="form-lable">帳號</label>
+                            <input type="text" class="form-control" id="username" name="username">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-lable">密碼</label>
+                            <input type="text" class="form-control" id="password" name="password">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="display-5 fw-900 my-3">表單樣式(橫向)</div>
+        <div class="row">
+            <div class="col-auto">
+                <label for="" class="form-label">帳號</label>
+            </div>
+            <div class="col-auto">
+                <input type="text"class="form-control">
+            </div>
+            <div class="col-auto">
+                <div class="form-text">不會記錄任何資訊</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="display-5 fw-900 my-3">表單樣式(檔案上傳)</div>
+    <div class="display-2 fw-900 my-3">1.表單樣式</div>
+    <div class="row justify-content-center">
+        <div class="col-10">
+            <div class="card">
+                <div class="car-body">
+                    <div class="mb-3">
+                        <label for="" class="form-label">選擇檔案(單一)</label>
+                        <input type="file" class="form-control">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">選擇檔案(多重)</label>
+                    <input type="file" class="form-control" multiple>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">選擇檔案</label>
+                <input type="file" class="form-control" disabled>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">選擇檔案(lg)</label>
+            <input type="file" class="form-control form-control-lg">
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">選擇檔案(sm)</label>
+        <input type="file" class="form-control form-control-sm">
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="display-2 fw-900 my-3">2.Datalists</div>
+    <div class="row justify-content-center">
+        <div class="col-10">
+            <div class="card">
+                <div class="car-body">
+                    <label for="" class="form-control">選擇餐點</label>
+                    <input type="text" class="form-control" placeholder="請輸入您要選擇的餐點!" list="foodlist">
+                    <datalist id="foodlist">
+                        <option value="雞腿便當"></option>
+                        <option value="牛肉麵"></option>
+                        <option value="麥當勞"></option>
+                        <option value="春水堂"></option>
+                    </datalist>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="display-2 fw-900 my-3">3.select</div>
+    <div class="row justify-content-center">
+        <div class="col-10">
+            <div class="card">
+                <div class="car-body">
+                    <label for="" class=" form-label">請選擇餐點</label>
+                    <select name="" id="" class="form-select">
+                        <option value="">雞腿便當</option>
+                        <option value="">牛肉麵</option>
+                        <option value="">麥當勞</option>
+                        <option value="">春水堂</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-10 mt-3">
+            <div class="card">
+                <div class="car-body">
+                    <select name="" id="" class="form-select">
+                        <option value="" selected disabled>---請選擇餐點---</option>
+                        <option value="">雞腿便當</option>
+                        <option value="">牛肉麵</option>
+                        <option value="">麥當勞</option>
+                        <option value="">春水堂</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="display-4 fw-900 my-3">select(複選)multiple, size ,lg, sm</div>
+        <div class="col-10 mt-3">
+            <div class="card">
+                <div class="car-body">
+                    <select name="" id="" class="form-select form-select-lg" multiple size="5">
+                        <option value="" selected disabled>---請選擇餐點---</option>
+                        <option value="">雞腿便當</option>
+                        <option value="">牛肉麵</option>
+                        <option value="">麥當勞</option>
+                        <option value="">春水堂</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-10 mt-3">
+            <div class="card">
+                <div class="car-body">
+                    <select name="" id="" class="form-select form-select-sm" multiple>
+                        <option value="" selected disabled>---請選擇餐點---</option>
+                        <option value="">雞腿便當</option>
+                        <option value="">牛肉麵</option>
+                        <option value="">麥當勞</option>
+                        <option value="">春水堂</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="display-2 fw-900 my-3">4. checkbox</div>
+    <div class="row justify-content-center">
+        <div class="col-10">
+            <div class="card">
+                <div class="car-body">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input">
+                        <label for="checkbox" class="form-check-label">雞腿便當</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input">
+                        <label for="checkbox" class="form-check-label">牛肉麵</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input">
+                        <label for="checkbox" class="form-check-label">麥當勞</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input">
+                        <label for="checkbox" class="form-check-label">春水堂</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="display-2 fw-900 my-3">4. checkbox(水平)</div>
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <div class="card">
+                    <div class="car-body">
+                        <div class="form-check-inline">
+                            <input type="checkbox" class="form-check-input">
+                            <label for="checkbox" class="form-check-label">雞腿便當</label>
+                        </div>
+                        <div class="form-check-inline">
+                            <input type="checkbox" class="form-check-input">
+                            <label for="checkbox" class="form-check-label">牛肉麵</label>
+                        </div>
+                        <div class="form-check-inline">
+                            <input type="checkbox" class="form-check-input">
+                            <label for="checkbox" class="form-check-label">麥當勞</label>
+                        </div>
+                        <div class="form-check-inline">
+                            <input type="checkbox" class="form-check-input">
+                            <label for="checkbox" class="form-check-label">春水堂</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="display-2 fw-900 my-3">5. radio(垂直)(name 必須一致)</div>
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <div class="card">
+                    <div class="car-body">
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="myfood">
+                            <label for="checkbox" class="form-check-label">雞腿便當</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="myfood">
+                            <label for="checkbox" class="form-check-label">牛肉麵</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="myfood">
+                            <label for="checkbox" class="form-check-label">麥當勞</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="myfood">
+                            <label for="checkbox" class="form-check-label">春水堂</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="display-2 fw-900 my-3">5. radio(水平)(name 必須一致)</div>
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <div class="card">
+                    <div class="car-body">
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" name="myfood01">
+                            <label for="checkbox" class="form-check-label">雞腿便當</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" name="myfood01">
+                            <label for="checkbox" class="form-check-label">牛肉麵</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" name="myfood01">
+                            <label for="checkbox" class="form-check-label">麥當勞</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" name="myfood01">
+                            <label for="checkbox" class="form-check-label">春水堂</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="display-2 fw-900 my-3">6. Range</div>
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <div class="card">
+                    <div class="car-body">
+                        <label for="">數量(99)</label>
+                        <input type="range" class="form-range" min="0" max="100" step="1">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="display-2 fw-900 my-3">7. input 群組</div>
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <div class="card">
+                    <div class="car-body">
+                        <div class="input-group input-group-lg mb-3"></div>
+                        <span class="input-group-text">帳號</span>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control">
+                        <span class="input-group-text">@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="display-2 fw-900 my-3">8. 表單驗證</div>
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <div class="card">
+                    <div class="car-body">
+                       <div class="row">
+                        <div class="col-6">
+                            <div class="mb-3">
+                                <label for="" class="form-label">姓氏</label>
+                                <input type="text" class="form-control is-valid">
+                                <div class="valid-feedback">輸入符合規則</div>
+                                <div class="invalid-feedback">輸入不符合規則</div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="mb-3">
+                                <label for="" class="form-label">名字</label>
+                                <input type="text" class="form-control is-invalid">
+                                <div class="valid-feedback">輸入符合規則</div>
+                                <div class="invalid-feedback">輸入不符合規則</div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                                <label for="" class="form-check-label is-invalid">同意條款</label>
+                                <div class="valid-feedback">您已同意條款或條件</div>
+                                <div class="invalid-feedback">你必須先同意條款或條件</div>
+                            </div>
+                        </div>
+                        <div class="col-12 text-center mt-3">
+                            <button class="btn btn-primary w-100">確認</button>
+                        </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="display-2 fw-900 my-3">9.floating label(浮動標籤)</div>
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <div class="card">
+                        <div class="car-body">
+                           <div class="mb-3 form-floating">
+                            <input type="text" class="form-control" id="usrename01" name="username01">
+                            <label for="username01" class="form-label">帳號</label>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

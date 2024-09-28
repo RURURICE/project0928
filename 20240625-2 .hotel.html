@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ch8 練習03</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+    <style>
+        /* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap'); */
+
+        /* body{
+            font-family: "Noto Sans TC", sans-serif;
+            font-optical-sizing: auto;
+        } */
+
+        .timeline-section{
+            position: relative;
+        }
+        .timeline-section::before{
+            position: absolute;
+            content: "";
+            top: 10px;
+            bottom: 10px;
+            width: 4px;
+            background-color: var(--mycolor01);
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgb(255, 127, 163);
+        }
+        .timeline-section-pointer{
+            position: relative;
+        }
+        .timeline-section-pointer::before{
+            position: absolute;
+            content: "";
+            width: 24px;
+            height: 24px;
+            background-color: var(--mycolor09);
+            border-radius: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 7px solid var(--mycolor04);
+            top: 10px;
+        }
+        .timeline-section-pointer:hover::before{
+            width: 36px;
+            height: 36px;
+            border: 10px soild var(--mycolor02);
+        }
+        @media screen and (max-width:768px){
+            .timeline-section::before{
+                left: -10px;
+            }
+            .timeline-section-pointer::before{
+                left: 3px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="timeline-section" id="mydata">
+        <div class="row align-items-center timeline-section-pointer">
+            <div class="col-md-6 mt-3">
+                <div class="box_text">
+                    <div class="h3 text-center text-success fw-900">旅館名稱</div>
+                    <div class="h4">地址:XXXXXX</div>
+                    <div class="h4">電話:XXXXXX</div>
+                    <div class="h4">車位:小客車0輛、機車0輛、大客車0輛</div>
+                    <div class="h5 fw-300">簡介:反映一是我還情緒滑鼠，卻是將來獲取三大魅力預期突然路線，電腦常常制度他對比如電源數碼相機，組合不良。
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mt-3">
+                <div class="boc_img bg-cover" style="background-image: url(images/0.3.JPG);height: 300px;">
+                    <div class="roller">
+                        <button class="btn btn-warning">查看更多</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center flex-row-reverse timeline-section-pointer">
+            <div class="col-md-6 mt-3">
+                <div class="box_text">
+                    <div class="h3 text-center text-success fw-900">暑假專案兩天一夜01</div>
+                    <div class="h4">價格<s>4999</s><span class="text-danger">3999</span>元</div>
+                    <div class="h5 fw-300">簡介:反映一是我還情緒滑鼠，卻是將來獲取三大魅力預期突然路線，電腦常常制度他對比如電源數碼相機，組合不良。
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mt-3">
+                <div class="boc_img bg-cover" style="background-image: url(images/0.3.JPG);height: 300px;"></div>
+            </div>
+        </div>
+        <div class="row align-items-center timeline-section-pointer">
+            <div class="col-md-6 mt-3">
+                <div class="box_text">
+                    <div class="h3 text-center text-success fw-900">暑假專案兩天一夜01</div>
+                    <div class="h4">價格<s>4999</s><span class="text-danger">3999</span>元</div>
+                    <div class="h5 fw-300">簡介:反映一是我還情緒滑鼠，卻是將來獲取三大魅力預期突然路線，電腦常常制度他對比如電源數碼相機，組合不良。
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mt-3">
+                <div class="boc_img bg-cover" style="background-image: url(images/0.3.JPG);height: 300px;"></div>
+            </div>
+        </div>
+        <div class="row align-items-center flex-row-reverse timeline-section-pointer">
+            <div class="col-md-6 mt-3">
+                <div class="box_text">
+                    <div class="h3 text-center text-success fw-900">暑假專案兩天一夜01</div>
+                    <div class="h4">價格<s>4999</s><span class="text-danger">3999</span>元</div>
+                    <div class="h5 fw-300">簡介:反映一是我還情緒滑鼠，卻是將來獲取三大魅力預期突然路線，電腦常常制度他對比如電源數碼相機，組合不良。
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mt-3">
+                <div class="boc_img bg-cover" style="background-image: url(images/0.3.JPG);height: 300px;"></div>
+            </div>
+        </div>
+
+    </div>
+  </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/hotel_C_f.json"></script>
+    <script>
+        
+    </script>
+</body>
+</html>

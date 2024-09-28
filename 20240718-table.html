@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>控制台 - 產品管理</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">控制台</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="20240718-product.html">產品建檔</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="20240718-table.html">產品管理</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <table class="table table-striped table-bordered table-rwd">
+                            <thead>
+                                <tr>
+                                    <th>產品編號</th>
+                                    <th>產品名稱</th>
+                                    <th>產品價格</th>
+                                    <th>產品數量</th>
+                                    <th>產品備註</th>
+                                    <th>建檔時間</th>
+                                    <th>-</th>
+                                </tr>
+                            </thead>
+                            <tbody id="datalist">
+                                <tr>
+                                    <td data-th="產品編號">001</td>
+                                    <td data-th="產品名稱">美式咖啡</td>
+                                    <td data-th="產品價格">65</td>
+                                    <td data-th="產品數量">10</td>
+                                    <td data-th="產品備註">說什麼為您，會議團。</td>
+                                    <td data-th="建檔時間">202408050205</td>
+                                    <td>
+                                        <button class="btn btn-warning" data-bs-toggle="modal"
+                                            data-bs-target="#updateModal" data-id="XX" data-name="XX" data-price="XX"
+                                            data-num="XX" data-remark="XX" id="btn_update">更新</button>
+                                        <button class="btn btn-danger" data-id="XX" id="btn_delete">刪除</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- updateModal -->
+    <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-bg-warning">
+                    <h1 class="modal-title fs-5 fw-900" id="exampleModalLabel">商品更新</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3 form-floating">
+                        <input type="text" class="form-control is-valid" id="p_name" name="p_name" list="p_name_list"
+                            placeholder="">
+                        <label for="p_name" class="form-label">產品名稱(字數2~6)</label>
+                        <datalist id="p_name_list">
+                            <option value="美式咖啡">美式咖啡</option>
+                            <option value="拿鐵咖啡">拿鐵咖啡</option>
+                            <option value="卡布">卡布</option>
+                        </datalist>
+                        <div class="valid-feedback">符合規定</div>
+                        <div class="invalid-feedback">不符合規定</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="p_price" class="form-label">產品價格(1~1000)</label>
+                        <input type="number" class="form-control is-valid" id="p_price" name="p_price" min="0"
+                            max="1000" value="100">
+                        <div class="valid-feedback">符合規定</div>
+                        <div class="invalid-feedback">不符合規定</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="p_num" class="form-label">產品數量(1~100)</label>
+                        <input type="number" class="form-control is-valid" id="p_num" name="p_num" min="0" max="100"
+                            value="10">
+                        <div class="valid-feedback">符合規定</div>
+                        <div class="invalid-feedback">不符合規定</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="p_remark" class="form-label">產品備註(1~5)</label>
+                        <textarea name="p_remark" id="p_remark" class="form-control is-valid"></textarea>
+                        <div class="valid-feedback">符合規定</div>
+                        <div class="invalid-feedback">不符合規定</div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" id="modal_btn_update">更新</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/sweetalert2@11.js"></script>
+    <script>
+        var flag_p_name = true;
+        var flag_p_price = true;
+        var flag_p_num = true;
+        var flag_p_remark = true;
+        var u_id; // for update api
+        $(function () {
+            $.ajax({
+                type: "GET",
+                url: "20240716-Read.php",
+                dataType: "json",
+                async: false,
+                success: showdata_read,
+                error: function () {
+                    alert("error-20240716-Read.php");
+                }
+            });
+
+            //btn_update 監聽按鈕
+            $("#datalist #btn_update").click(function () {
+                console.log($(this).data("id"));
+                console.log($(this).data("name"));
+                console.log($(this).data("price"));
+                console.log($(this).data("num"));
+                console.log($(this).data("remark"));
+
+                u_id = $(this).data("id");
+                $("#p_name").val($(this).data("name"));
+                $("#p_price").val($(this).data("price"));
+                $("#p_num").val($(this).data("num"));
+                $("#p_remark").val($(this).data("remark"));
+            });
+
+            //btn_delete 監聽按鈕
+            $("#datalist #btn_delete").click(function () {
+                if (confirm("確認刪除此筆資料?")) {
+                    console.log($(this).data("id"));
+                    //{"ID": "xxx"}
+                    var dataJSON = {};
+                    dataJSON["ID"] = $(this).data("id");
+                    console.log(JSON.stringify(dataJSON));
+
+                    //傳遞至後端api 執行刪除
+                    $.ajax({
+                        type: "POST",
+                        url: "20240718-Delete.php",
+                        data: JSON.stringify(dataJSON),
+                        contentType: "application/json;charset=utf-8",
+                        dataType: "json",
+                        success: showdata_delete,
+                        error: function () {
+                            alert("error-20240718-Delete.php");
+                        }
+                    });
+                }
+            });
+
+
+
+            //監聽p_name
+            $("#p_name").bind("input propertychange", function () {
+                if ($(this).val().length > 1 && $(this).val().length < 7) {
+                    //符合規定
+                    $(this).removeClass("is-invalid");
+                    $(this).addClass("is-valid");
+                    flag_p_name = true;
+                } else {
+                    //不符合規定
+                    $(this).removeClass("is-valid");
+                    $(this).addClass("is-invalid");
+                    flag_p_name = false;
+                }
+            });
+
+            //監聽p_price
+            $("#p_price").bind("input propertychange", function () {
+                if ($(this).val() > 0 && $(this).val() < 1001) {
+                    //符合規定
+                    $(this).removeClass("is-invalid");
+                    $(this).addClass("is-valid");
+                    flag_p_price = true;
+                } else {
+                    //不符合規定
+                    $(this).removeClass("is-valid");
+                    $(this).addClass("is-invalid");
+                    flag_p_price = false;
+                }
+            });
+
+            //監聽p_num
+            $("#p_num").bind("input propertychange", function () {
+                if ($(this).val() > 0 && $(this).val() < 101) {
+                    //符合規定
+                    $(this).removeClass("is-invalid");
+                    $(this).addClass("is-valid");
+                    flag_p_num = true;
+                } else {
+                    //不符合規定
+                    $(this).removeClass("is-valid");
+                    $(this).addClass("is-invalid");
+                    flag_p_num = false;
+                }
+            });
+
+            //監聽p_remark
+            $("#p_remark").bind("input propertychange", function () {
+                if ($(this).val().length > 0 && $(this).val().length < 6) {
+                    //符合規定
+                    $(this).removeClass("is-invalid");
+                    $(this).addClass("is-valid");
+                    flag_p_remark = true;
+                } else {
+                    //不符合規定
+                    $(this).removeClass("is-valid");
+                    $(this).addClass("is-invalid");
+                    flag_p_remark = false;
+                }
+            });
+
+            //#modal_btn_update 按鈕監聽
+            $("#modal_btn_update").click(function () {
+                if (flag_p_name && flag_p_num && flag_p_price && flag_p_remark) {
+                    console.log(u_id);
+                    console.log($("#p_name").val());
+                    console.log($("#p_num").val());
+                    console.log($("#p_price").val());
+                    console.log($("#p_remark").val());
+
+                    //傳遞至後端20240716-Update.php 執行更新行為
+                    //{"ID": "xxx","name":"雞腿飯", "price":"100", "num":"2", "remark":"好吃"}
+                    var dataJSON = {};
+
+                    dataJSON["ID"] = u_id;
+                    dataJSON["name"] = $("#p_name").val();
+                    dataJSON["price"] = $("#p_price").val();
+                    dataJSON["num"] = $("#p_num").val();
+                    dataJSON["remark"] = $("#p_remark").val();
+
+                    console.log(JSON.stringify(dataJSON));
+
+                    $.ajax({
+                        type: "POST",
+                        url: "20240716-Update.php",
+                        data: JSON.stringify(dataJSON),
+                        contentType: "application/json;charset=utf-8",
+                        dataType: "json",
+                        success: showdata_update,
+                        error: function () {
+                            alert("error-20240716-Update.php");
+                        }
+                    });
+                } else {
+                    alert("欄位有錯, 請修正!");
+                }
+            });
+
+        });
+        function showdata_read(data) {
+            console.log(data);
+
+            $("#datalist").empty();
+            data.data.forEach(function (item) {
+                var strHTML = '<tr><td data-th="產品編號">' + item.ID + '</td><td data-th="產品名稱">' + item.Name + '</td><td data-th="產品價格">' + item.Price + '</td><td data-th="產品數量">' + item.Num + '</td><td data-th="產品備註">' + item.Remark + '</td><td data-th="建檔時間">' + item.Created_at + '</td><td><button class="btn btn-warning me-2" data-bs-toggle="modal" data-bs-target="#updateModal" data-id="' + item.ID + '" data-name="' + item.Name + '" data-price="' + item.Price + '" data-num="' + item.Num + '" data-remark="' + item.Remark + '" id="btn_update">更新</button><button class="btn btn-danger" data-id="' + item.ID + '" id="btn_delete">刪除</button></td></tr>';
+
+                $("#datalist").append(strHTML);
+            });
+        }
+
+        function showdata_update(data) {
+            console.log(data);
+            if (data.state) {
+                // alert(data.message);
+                Swal.fire({
+                    title: data.message,
+                    showDenyButton: false,
+                    showCancelButton: false,
+                    confirmButtonText: "確認",
+                    denyButtonText: `Don't save`
+                }).then((result) => {
+                    /* Read more about isConfirmed, isDenied below */
+                    if (result.isConfirmed) {
+                        Swal.fire("Saved!", "", "success").then(() => {
+                            location.href = "20240718-table.html";
+                        }); 
+                    } else if (result.isDenied) {
+                        Swal.fire("Changes are not saved", "", "info");
+                    }
+                });          
+            } else {
+                alert(data.message + "請找系統維修人員");
+            }
+        }
+
+        function showdata_delete(data) {
+            console.log(data);
+            if (data.state) {
+                alert(data.message);
+                location.href = "20240718-table.html";
+            } else {
+                alert(data.message + "請找系統維修人員");
+            }
+        }
+    </script>
+</body>
+
+</html>

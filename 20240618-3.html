@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>串接資料</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+    <style>
+        .box{
+            height: auto;
+            margin-top: 15px;
+            border: 2px solid var(--mycolor01);
+            box-shadow: 2px 2px 2px 2px var(--mycolor02);
+        }
+        .box_text{
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row" id="mydata">
+            <div class="col-sm-6">
+                <div class="box">
+                   <div class="bg-cover" style="background-image: url(https://ezgo.ardswc.gov.tw/Uploads/opendata/TainmaMain01/APPLY_D/20151102181604.jpg);height: 180px;"></div>
+                   <div class="box_text">
+                    <div class="h4">走馬賴餐廳</div>
+                    <div class="h4">電話:05-7257895</div>
+                    <div class="h4">地址:XXXXXXXXXXXXXX</div>
+                    <div class="h4 text-truncate">簡介:壓力我來意大利很久，你怎不來，添加法律站內夢幻不代表光碟如。</div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        // $(function(){
+        //     console.log("hello world!");
+        //     var weight, height, bmi;
+        //     weight = 60;
+        //     height = 160;
+        //     bmi = 60/((160/100)*(160/100));
+        //     console.log("體重: " + weight + "公斤");
+        //     console.log("身高: " + height + "公分");
+        //     console.log("BMI: " + bmi);
+        //     for( var i=0 ; i < 9; i++ ){
+        //         if( i >5 ){
+        //             console.log(i);
+        //         }
+        //         console.log(i);
+        //     }
+        // });
+        //主程式
+        $(function(){
+            $.ajax({
+                type: "GET",
+                url: "https://data.moa.gov.tw/Service/OpenData/ODwsv/ODwsvTravelFood.aspx?IsTransData=1&UnitId=193",
+                dataType: "json",
+                success: showdata,
+                error:function(){
+                    console.log("連線錯誤!https://data.moa.gov.tw/Service/OpenData/ODwsv/ODwsvTravelFood.aspx?IsTransData=1&UnitId=193");
+                }
+            });
+        });
+
+        function showdata(data){
+        //    for(var i=0; i < 139; i++){
+        //     var counter = i+1;
+        //     console.log(counter + " : " +data[i].Name);
+        //    }
+        // $("#mydata").html("123");
+        // $("#mydata").append("123");
+        // $("#mydata").append("123");
+
+        console.log(data);
+        $("#mydata").empty();
+        for(var i=0 ; i < 139; i++){ 
+            // $("#mydata").append('<div class="col-sm-6 col-md-4 col-lg-3"><div class="box bg-success"><div class="display-4">' + i + " : " + data[i].Name + '</div></div></div>');
+
+            var Hwork = data[i].HostWords.substring(0,30);
+            var strHTML = '<div class="col-sm-6 col-md-4 mt-3"><div class="box h-100"><div class="bg-cover" style="background-image: url('+ data[i].PicURL +');height: 180px;"></div><div class="box_text"><div class="h4">' + data[i].Name + '</div><div class="h4">電話:' + data[i].Tel + '</div><div class="h4">地址:'+ data[i].Address +'</div><div class="h4 text-truncate">簡介:' + data[i].HostWords +'</div></div></div></div>';
+            $("#mydata").append(strHTML);
+            }
+
+
+            
+            console.log(data[i].PicURL);
+        }
+    </script>
+</body>
+</html>

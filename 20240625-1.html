@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ch8 練習2</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+    <style>
+        .box01{
+            position: relative;
+            overflow: hidden;
+        }
+        .roller{
+            position: absolute;
+            left: 0;
+            left:-100%;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(201,245,212,0.3);
+        }
+        .box01:hover .roller{
+            left:0;
+            transition: left 2s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fuid">
+        <div class="row">
+            <div class="col md-4 bg-cover" style="background-image: url(images/0.1\ .JPG);height: 200px;"></div>
+            <div class="col md-4 bg-cover" style="background-image: url(images/0.3.JPG);height: 200px;"></div>
+            <div class="col md-4 bg-cover" style="background-image: url(images/0.4.JPG);height: 200px;"></div>
+        </div>
+        <div class="row vh-100 bg-info">
+            <div class="col-md-3 bg-warning">
+                <div class="d-flex flex-column h-100 row">
+                    <div class="height:33.33vhbg-cover" style="background-image: url(images/0.6.JPG);height:33.33vh"></div>
+                    <div class="height:33.33vhbg-cover" style="background-image: url(images/0.3.JPG);height:33.33vh"></div>
+                    <div class="height:33.33vhbg-cover" style="background-image: url(images/0.3.JPG);height:33.33vh"></div>
+                </div>
+            </div>
+            <div class="col-md-6 bg-success bg-cover box01" style="background-image: url(images/0.4.JPG);" >
+                <div class="roller d-flex justify-content-center align-items-center">
+                    <div class="btn btn-warning">查看更多</div>
+                </div>
+            </div>
+            <div class="col-md-3 bg-warning">
+                <div class="d-flex flex-column h-100 row">
+                    <div class="h-50 bg-cover" style="background-image: url(images/0.6.JPG)"></div>
+                    <div class="h-50 bg-cover" style="background-image: url(images/0.3.JPG)"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-3 bg-cover" style="background-image: url(images/0.4.JPG);height:200px;"></div>
+            <div class="col-md-3 bg-cover" style="background-image: url(images/0.4.JPG);height:200px;"></div>
+            <div class="col-md-3 bg-cover" style="background-image: url(images/0.4.JPG);height:200px;"></div>
+            <div class="col-md-3 bg-cover" style="background-image: url(images/0.4.JPG);height:200px;"></div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>    
+</body>
+</html>

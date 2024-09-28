@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ch5 table</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+    <style>
+        @media screen and (max-width: 992px){
+            .table-rwd thead{
+                display: none;
+        }
+        .table-rwd tbody tr{
+            display: block;
+            border: 5px solid var(--mycolor09);
+            margin-top: 15px;
+        }
+        .table-rwd tbody tr td{
+            display: block;
+            overflow: hidden;
+        }
+        .table-rwd tbody tr td::before{
+                content: attr(data-th)" : ";
+                color: brown;
+                /* font-size: 20px; */
+                font-weight: bolder;
+                display: block;
+                float: left;
+                width: 6em;
+                text-align: right;
+                padding-right: 1em;
+            }
+            .table-rwd tbody tr td span.table-col{
+                display: block;
+                float: left;
+                width: calc(100% - 6em);
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table class="table table-rwd">
+            <thead class="table-dark">
+                <tr>
+                    <th width="5%">商品編號</th>
+                    <th width="5%">商品名稱</th>
+                    <th width="20%">商品圖片</th>
+                    <th width="5%">商品價格</th>
+                    <th width="5%">商品數量</th>
+                    <th width="60%">商品備註</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-th="商品編號"><span class="table-col">001</span></td>
+                    <td data-th="商品名稱"><span class="table-col">蛋糕001</span></td>
+                    <td data-th="商品圖片"><span class="table-col"><img src="images/DSC_0576.JPG" width="300px" alt=""></span></td>
+                    <td data-th="商品價格"><span class="table-col">99元</span></td>
+                    <td data-th="商品數量"><span class="table-col">10個</span></td>
+                    <td data-th="商品備註"><span class="table-col">情況堅持黃金障礙老婆影響父母現金全身條件修改明白全體，企業從事很多人打擊心裡依然十二相關內容形勢，手術開通詢問高興，笑話上帝點此背景異常認識他就進步，引起處於。</span></td>
+                </tr>
+                
+                <tr>
+                    <td>002</td>
+                    <td>蛋糕002</td>
+                    <td><img src="images/cake02.jpg" width="300px" alt=""></td>
+                    <td>99元</td>
+                    <td>10個</td>
+                    <td>情況堅持黃金障礙老婆影響父母現金全身條件修改明白全體，企業從事很多人打擊心裡依然十二相關內容形勢，手術開通詢問高興，笑話上帝點此背景異常認識他就進步，引起處於。</td>
+                </tr>
+                <tr>
+                    <td>003</td>
+                    <td>蛋糕003</td>
+                    <td><img src="images/cake03.jpg" width="300px" alt=""></td>
+                    <td>99元</td>
+                    <td>10個</td>
+                    <td>情況堅持黃金障礙老婆影響父母現金全身條件修改明白全體，企業從事很多人打擊心裡依然十二相關內容形勢，手術開通詢問高興，笑話上帝點此背景異常認識他就進步，引起處於。</td>
+                </tr>
+                <tr>
+                    <td>004</td>
+                    <td>蛋糕004</td>
+                    <td><img src="images/cake04.jpg" width="300px" alt=""></td>
+                    <td>99元</td>
+                    <td>10個</td>
+                    <td>情況堅持黃金障礙老婆影響父母現金全身條件修改明白全體，企業從事很多人打擊心裡依然十二相關內容形勢，手術開通詢問高興，笑話上帝點此背景異常認識他就進步，引起處於。</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>   
+    
+</body>
+</html>

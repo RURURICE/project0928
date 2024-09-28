@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>觀光署旅館資料</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+</head>
+
+<body>
+    <div class="banner bg-cover pt-3 pe-3" style="background-image: url(images/landscape01.avif); height: 250px;">
+        <div class="display-1 fw-900 text-white">觀光署旅館資料</div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <select name="regionList" id="regionList" class="form-select" style="margin-top: -15px;">
+                    <option value="" class="disabled">-- 請選擇縣市 --</option>
+                </select>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="card">
+                    <img src="https://taiwan.taiwanstay.net.tw/twpic/14921.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <div class="h3 fw-900">凱莎琳庭園大飯店</div>
+                        <div class="h3">地址:高雄市前金區文武三街145號</div>
+                        <div class="h3">電話:886-7-2152158</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var hoteldata = [];
+        var regionTitle = [];
+        var counter = [];
+        var regionData = [];
+
+        $(function () {
+            //載入hoteldata
+            $.ajax({
+                type: "GET",
+                url: "js/hotel_C_f.json",
+                dataType: "json",
+                async: false,
+                success: function (data) {
+                    console.log(data);
+                    hoteldata = data.XML_Head.Infos.Info;
+                },
+                error: function () {
+                    alert("error-js/hotel_C_f.json");
+                }
+            });
+
+            console.log(hoteldata);
+            hoteldata.forEach(function (item) {
+                // console.log(item.Region);
+                if (counter[item.Region] == undefined) {
+                    counter[item.Region] = regionData.length;
+                    regionData.push(new Array());
+                    regionTitle[counter[item.Region]] = item.Region;
+                }
+                regionData[counter[item.Region]].push(item);
+            });
+
+            console.log(regionTitle);
+            console.log(counter);
+            console.log(regionData);
+
+            //產生縣市選單
+            $("#regionList").empty();
+            $("#regionList").append('<option value="" disabled selected>-- 請選擇縣市 --</option>');
+            regionTitle.forEach(function (item) {
+                var strHTML = '<option value="' + item + '">' + item + '</option>';
+                $("#regionList").append(strHTML);
+            });
+        })
+    </script>
+</body>
+
+</html>

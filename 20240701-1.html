@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ch9 通用類別 Utilities</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+    <style>
+        .box01{
+            width: 100px;
+            height: 100px;
+            background-color: var(--mycolor02);
+
+        }
+        .box02{
+            width: 150px;
+            height: 150px;
+            background-color: var(--mycolor09);
+            display: inline-block;
+        }
+        .demo01{
+            height: 550px;
+            width: 550px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid mx-3">
+        <div class="display-2 fw-900">1.邊框 border</div>
+        <div class="row bg-dark p-3">
+            <div class="box01 m-1 border border-5"></div>
+            <div class="box01 m-1 border-5 border-top"></div>
+            <div class="box01 m-1 border-5 border-bottom"></div>
+            <div class="box01 m-1 border-5 border-start"></div>
+            <div class="box01 m-1 border-5 border-end"></div>
+
+            <div class="bg-success" style="height: 300px;">
+                <div class="h-25 bg-warning d-inline-block" style="width: 100px;">h-25</div>
+                <div class="h-50 bg-warning d-inline-block" style="width: 100px;">h-50</div>
+                <div class="h-75 bg-warning d-inline-block" style="width: 100px;">h-75</div>
+                <div class="h-100 bg-warning d-inline-block" style="width: 100px;">h-100</div>
+            </div>
+        </div>
+    </div>
+        <div class="display-2 fw-900">移除邊框 border</div>
+        <div class="row bg-dark p-3">
+            <div class="box01 m-1 border border-5"></div>
+            <div class="box01 m-1 border border-5 border-0"></div>
+            <div class="box01 m-1 border border-5 bordar-start-0"></div>
+            <div class="box01 m-1 border border-5 borser-bottom-0"></div>
+            <div class="box01 m-1 border border-5 border-top-0"></div>
+            <div class="box01 m-1 border border-5 borser-bottom-0"></div>
+            <div class="box01 m-1 border border-5 border-end-0"></div>
+        </div>
+    </div>
+        <div class="display-2 fw-900">邊框顏色</div>
+        <div class="row bg-dark p-3">
+            <div class="box01 m-1 border border-5 border-primary"></div>
+            <div class="box01 m-1 border border-5 border-success"></div>
+            <div class="box01 m-1 border border-5 border-info"></div>
+            <div class="box01 m-1 border border-5 border-warning"></div>
+            <div class="box01 m-1 border border-5 border-danger"></div>
+            <div class="box01 m-1 border border-5 border-light"></div>
+        </div>border 
+    </div>
+        <div class="display-2 fw-900">圓角</div>
+        <div class="row bg-dark p-3">
+            <div class="box01 m-1 border border-5 border-primary rounded"></div>
+            <div class="box01 m-1 border border-5 border-primary rounded-top"></div>
+            <div class="box01 m-1 border border-5 border-primary rounded-bottom"></div>
+            <div class="box01 m-1 border border-5 border-primary rounded-start"></div>
+            <div class="box01 m-1 border border-5 border-primary rounded-end"></div>
+            <div class="box01 m-1 border border-5 border-primary rounded-circle"></div>
+        </div>
+
+        <div class="display-2 fw-900">2.文字背景色</div>
+        <div class="text-bg-success p-3 h4 fw-900 w-50">他是生產不喜歡，風格緩緩思考角度今年案。</div>
+        <div class="display-2 fw-900">2.文字</div>
+        <div class="text-bg-warning p-3 h4 fw-900 w-50">他是生產不喜歡，風格緩緩思考角度今年案。</div>
+        <div class="display-2 fw-900">2.文字</div>
+        <div class="text-bg-primary p-3 h4 fw-900 w-50">他是生產不喜歡，風格緩緩思考角度今年案。</div>
+        <div class="display-2 fw-900">2.文字</div>
+        <div class="text-bg-info p-3 h4 fw-900 w-50">他是生產不喜歡，風格緩緩思考角度今年案。</div>
+
+        <div class="display-2 fw-900">3.display(d-inline水平 vs d-block直排)</div>
+        <div class="py-3 bg-dark w-50">
+            <div class="p-2 text-bg-warning d-inline">d-inline</div>
+            <div class="p-2 text-bg-warning d-inline">d-inline</div>
+            <div class="p-2 text-bg-warning d-inline">d-inline</div>
+            <div class="p-2 text-bg-warning d-inline">d-inline</div>
+
+        <div class="py-3 bg-dark w-50">
+            <span class="p-2 text-bg-warning d-block">d-block</span>
+            <span class="p-2 text-bg-warning d-block">d-block</span>
+            <span class="p-2 text-bg-warning d-block">d-block</span>
+            <span class="p-2 text-bg-warning d-block">d-block</span>
+        </div>
+
+        <div class="display-4 fw-900 text-danger">行動版隱藏,桌面板顯示</div>
+        <div class="py-3 bg-info">
+            <span class="d-none d-md-block text-bg-warning w-50">行動版隱藏,專面板顯示</span>
+        </div>
+
+
+
+        <div class="display-2 fw-900">4.滑鼠互動</div>
+        <p class="user-select-all">什麼時候問道反應來電爭取，更。</p>
+        <p class="user-select-auto">什麼時候問道反應來電爭取，更。</p>
+        <p class="user-select-none">什麼時候問道反應來電爭取，更。</p>
+
+
+        <div class="display-2 fw-900">5.overflow</div>
+        <div class="box02">
+            孤獨優惠因此股權，一定會，附近太麻里彷彿，小七一直有個創作資本優化主義同樣填寫案件民族手中知識參考。
+        </div>
+        <div class="box02 overflow-auto">
+            孤獨優惠因此股權，一定會，附近太麻里彷彿，小七一直有個創作資本優化主義同樣填寫案件民族手中知識參考。
+        </div>
+        <div class="box02 overflow-visible">
+            孤獨優惠因此股權，一定會，附近太麻里彷彿，小七一直有個創作資本優化主義同樣填寫案件民族手中知識參考。
+        </div>
+        <div class="box02 overflow-hidden">
+            孤獨優惠因此股權，一定會，附近太麻里彷彿，小七一直有個創作資本優化主義同樣填寫案件民族手中知識參考。
+        </div>
+        <div class="box02 overflow-scroll">
+            孤獨優惠因此股權，一定會，附近太麻里彷彿，小七一直有個創作資本優化主義同樣填寫案件民族手中知識參考。
+        </div>
+
+
+        <div class="display-2 fw-900">練習: 選單(搭配 sticky-top fixed-botton)</div>
+        <div class="bg-secondary w-75">
+            <ul class="list-unstyled d-flex justify-content-between flex-nowrap-auto my-3 overflow-auto my-3">
+                <li class="text-bg-warning p-2 text-nowrap border-3 border-dark border-end">首頁選單</li>
+                <li class="text-bg-warning p-2 text-nowrap border-3 border-dark border-end">熱門選單</li>
+                <li class="text-bg-warning p-2 text-nowrap border-3 border-dark border-end">體育選單</li>
+                <li class="text-bg-warning p-2 text-nowrap border-3 border-dark border-end">娛樂選單</li>
+                <li class="text-bg-warning p-2 text-nowrap border-3 border-dark border-end">購物選單</li>
+                <li class="text-bg-warning p-2 text-nowrap border-3 border-dark border-end">財經新聞</li>
+                <li class="text-bg-warning p-2 text-nowrap border-3 border-dark border-end">氣象新聞</li>
+            </ul>
+        </div>
+
+        <div class="display-2 fw-900">6. position</div>
+        <div class="demo01 border border-5 border-success position-relative">
+            <div class="box01 position-absolute top-0 start-0"></div>
+            <div class="box01 position-absolute top-0 start-50"></div>
+            <div class="box01 position-absolute top-0 start-100"></div>
+            <div class="box01 position-absolute top-50 start-0"></div>
+            <div class="box01 position-absolute top-50 start-50"></div>
+            <div class="box01 position-absolute top-50 start-100"></div>
+            <div class="box01 position-absolute top-100 start-0"></div>
+            <div class="box01 position-absolute top-100 start-50"></div>
+            <div class="box01 position-absolute top-100 start-100"></div>
+        </div>
+        <br><br><br><br><br><br><br><br>
+        <div class="display-2 fw-900">translate-middle排版</div>
+        <br><br><br><br><br>
+        <div class="demo01 border border-5 border-success position-relative">
+            <div class="box01 position-absolute top-0 start-0 translate-middle"></div>
+            <div class="box01 position-absolute top-0 start-50 translate-middle"></div>
+            <div class="box01 position-absolute top-0 start-100 translate-middle"></div>
+            <div class="box01 position-absolute top-50 start-0 translate-middle"></div>
+            <div class="box01 position-absolute top-50 start-50 translate-middle"></div>
+            <div class="box01 position-absolute top-50 start-100 translate-middle"></div>
+            <div class="box01 position-absolute top-100 start-0 translate-middle"></div>
+            <div class="box01 position-absolute top-100 start-50 translate-middle"></div>
+            <div class="box01 position-absolute top-100 start-100 translate-middle"></div>
+        </div>
+
+        <br><br><br><br><br>
+        <div class="demo01 border border-5 border-success position-relative">
+            <div class="box01 position-absolute top-0 start-0"></div>
+            <div class="box01 position-absolute top-0 start-50 translate-middle-x"></div>
+            <div class="box01 position-absolute top-0 end-0"></div>
+            <div class="box01 position-absolute top-50 start-0 translate-middle-y"></div>
+            <div class="box01 position-absolute top-50 start-50 translate-middle"></div>
+            <div class="box01 position-absolute top-50 end-0 translate-middle-y"></div>
+            <div class="box01 position-absolute bottom-0 start-0"></div>
+            <div class="box01 position-absolute bottom-0 start-50 translate-middle-x"></div>
+            <div class="box01 position-absolute bottom-0 end-0"></div>
+        </div>
+        <br><br><br><br><br>
+        <div class="display-2 fw-900"> position 範例</div>
+        <button class=" btn btn-primary">未讀訊息<span class= "bage tex-bg-danger fw-900 rounded-circle p-1 position-absolute top-0 star-100 translate-middle">+99</span>
+        </button>
+        <br><br><br><br><br>
+        <div class="display-2 fw-900"> position 範例</div>
+        <br><br><br>
+        <div class="position-relative">
+            <div class="progress" style="height: 5px;">
+                <div class="progress-bar" style="width: 50%;"></div>
+            </div>
+            <button class="btn btn-sm btn-primary rounded-circle position-absolute top-0 start-0 translate-middle" style="width: 32px; height: 32px;">1</button>
+            <button class="btn btn-sm btn-success rounded-circle position-absolute top-0 start-50 translate-middle" style="width: 32px; height: 32px;;">2</button>
+            <button class="btn btn-sm btn-light rounded-circle position-absolute top-0 start-100 translate-middle" style="width: 32px; height: 32px;">3</button>
+        </div>
+        <br><br><br><br><br>
+
+        <div class="display-2 fw-900">7.shadow</div>
+        <div class="p-3 bg-light mb-5 shadow">強大年代未知教授哈哈難道，知。</div>
+        <div class="p-3 bg-light mb-5 shadow-none">強大年代未知教授哈哈難道，知。</div>
+        <div class="p-3 bg-light mb-5 shadow-lg">強大年代未知教授哈哈難道，知。</div>
+        <div class="p-3 bg-light mb-5 shadow-sm">強大年代未知教授哈哈難道，知。</div>
+
+        <br><br><br><br><br>
+        <div class="display-2 fw-900">8. sizing</div>
+        <div class="bg-secondary w-25 p-3">w-25</div>
+        <div class="bg-secondary w-50 p-3">w-50</div>
+        <div class="bg-secondary w-75 p-3">w-75</div>
+        <div class="bg-secondary w-100 p-3">w-100</div>
+
+        <div class="bg-info vh-100">
+            <div class="display-1 fw-900">vh-100</div>
+
+            <div class="display-2 fw-900">9.visible,invisible vs d-block,d-none</div>
+            <div>
+                <div class="box02 bg-warning d-none">01</div>
+                <div class="box02 bg-secondary">02</div>
+                <div class="box02 bg-success">03</div>
+            </div>
+            <br><br><br><br>
+            <div class="display-2 fw-900">10.color link</div>
+            <a href="#" class="link-danger">常見情人出台手。</a>
+            <a href="#" class="link-warning">常見情人出台手。</a>
+            <a href="#" class="link-success">常見情人出台手。</a>
+            <a href="#" class="link-dark">常見情人出台手。</a>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
